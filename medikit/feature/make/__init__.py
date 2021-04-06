@@ -88,15 +88,15 @@ class MakeFeature(Feature):
             'sys.exit(0 if (Version(medikit.__version__) >= Version("$(MEDIKIT_VERSION)")) and (Version(pip.__version__) < Version("10")) else 1)',
         ]
 
-        self.makefile.add_target(
-            "medikit",
-            '@$(PYTHON) -c {!r} || $(PYTHON) -m pip install -U "pip {PIP_VERSION}" "medikit>=$(MEDIKIT_VERSION)"'.format(
-                "; ".join(source), PIP_VERSION=PIP_VERSION
-            ),
-            phony=True,
-            hidden=True,
-            doc="Checks installed medikit version and updates it if it is outdated.",
-        )
+        # self.makefile.add_target(
+        #     "medikit",
+        #     '@$(PYTHON) -c {!r} || $(PYTHON) -m pip install -U "pip {PIP_VERSION}" "medikit>=$(MEDIKIT_VERSION)"'.format(
+        #         "; ".join(source), PIP_VERSION=PIP_VERSION
+        #     ),
+        #     phony=True,
+        #     hidden=True,
+        #     doc="Checks installed medikit version and updates it if it is outdated.",
+        # )
 
         self.makefile.add_target(
             "update",
