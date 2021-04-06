@@ -88,6 +88,7 @@ class MakeFeature(Feature):
             'sys.exit(0 if (Version(medikit.__version__) >= Version("$(MEDIKIT_VERSION)")) and (Version(pip.__version__) < Version("10")) else 1)',
         ]
 
+        # TODO: Uncomment to allow auto-update on Mediakit
         # self.makefile.add_target(
         #     "medikit",
         #     '@$(PYTHON) -c {!r} || $(PYTHON) -m pip install -U "pip {PIP_VERSION}" "medikit>=$(MEDIKIT_VERSION)"'.format(
