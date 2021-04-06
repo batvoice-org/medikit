@@ -1,3 +1,2 @@
-import git
-repo = git.Repo(search_parent_directories=True)
-__version__ = repo.git.describe('--abbrev=8', '--always', 'HEAD')
+import subprocess
+__version__ = subprocess.check_output(["git", "describe", '--abbrev=8', '--always', 'HEAD']).strip()
