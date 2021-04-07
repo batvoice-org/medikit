@@ -90,7 +90,7 @@ class MakeFeature(Feature):
 
         self.makefile.add_target(
             "medikit",
-            '@$(PYTHON) -c {!r} || $(PYTHON) -m pip install -U "pip {PIP_VERSION}" "git+https://github.com/batvoice-org/medikit.git@master"'.format(
+            '@$(PYTHON) -c {!r} || $(PYTHON) -m pip install -U "pip {PIP_VERSION}" "git+https://github.com/batvoice-org/medikit.git@$(MEDIKIT_VERSION)"'.format(
                 "; ".join(source), PIP_VERSION=PIP_VERSION
             ),
             phony=True,
