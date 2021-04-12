@@ -181,5 +181,5 @@ License
     :target: https://app.fossa.io/projects/git%2Bgithub.com%2Fpython-medikit%2Fmedikit?ref=badge_large
     :alt: License Status
 
-
 A change
+Another change
